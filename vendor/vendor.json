@@ -11,6 +11,10 @@
 			"versionExact": "v1.0"
 		},
 		{
+			"path": "github.com/grafeas/grafeas/grafeas",
+			"revision": ""
+		},
+		{
 			"checksumSHA1": "iN//qSunKGImecnRCcQrGTFgJMk=",
 			"path": "golang.org/x/net/publicsuffix",
 			"revision": "a04bdaca5b32abe1c069418fb7088ae607de5bd0",
