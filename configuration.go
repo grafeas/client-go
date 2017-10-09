@@ -46,7 +46,7 @@ type Configuration struct {
 
 func NewConfiguration() *Configuration {
 	return &Configuration{
-		BasePath:      "http://localhost",
+		BasePath:      "http://localhost:8080",
 		UserName:      "",
 		debug:         false,
 		DefaultHeader: make(map[string]string),
