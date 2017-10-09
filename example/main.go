@@ -15,10 +15,10 @@
 package main
 
 import (
-	"github.com/grafeas/client-go"
-	"log"
-	"github.com/grafeas/grafeas/samples/server/go-server/api/server/name"
 	"fmt"
+	"github.com/grafeas/client-go"
+	"github.com/grafeas/grafeas/samples/server/go-server/api/server/name"
+	"log"
 )
 
 func main() {
@@ -28,13 +28,14 @@ func main() {
 	n := note(nPID, nID)
 	createdN, _, err := client.CreateNote(nPID, nID, *n)
 	if err != nil {
-		log.Printf("Error creating note %v", err)
+		log.Fatalf("Error creating note %v", err)
 	} else {
 		log.Printf("Succesfully created note: %v", createdN)
 	}
 
 	if got, _, err := client.GetNote(nPID, nID); err != nil {
-		log.Printf("Error getting note %v", err)
+		log.Fatalf("Error getting note %v", err)
+
 	} else {
 		log.Printf("Succesfully got note: %v", got)
 	}
@@ -43,13 +44,13 @@ func main() {
 	o := Occurrence(createdN.Name)
 	createdO, _, err := client.CreateOccurrence(oPID, *o)
 	if err != nil {
-		log.Printf("Error creating occurrence %v", err)
+		log.Fatalf("Error creating occurrence %v", err)
 	} else {
 		log.Printf("Succesfully created occurrence: %v", createdO)
 	}
 
-	 _, oID, pErr := name.ParseOccurrence(createdO.Name);
-	 if pErr != nil {
+	_, oID, pErr := name.ParseOccurrence(createdO.Name)
+	if pErr != nil {
 		log.Fatalf("Unable to get occurenceId from occurrence name %v: %v", createdO.Name, err)
 	}
 	if got, _, err := client.GetOccurrence(oPID, oID); err != nil {
@@ -62,7 +63,7 @@ func main() {
 
 func note(pID, nID string) *swagger.Note {
 	return &swagger.Note{
-		Name: fmt.Sprintf("projects/%v/notes/%v", pID, nID),
+		Name:             fmt.Sprintf("projects/%v/notes/%v", pID, nID),
 		ShortDescription: "CVE-2014-9911",
 		LongDescription:  "NIST vectors: AV:N/AC:L/Au:N/C:P/I:P",
 		Kind:             "PACKAGE_VULNERABILITY",
@@ -71,7 +72,7 @@ func note(pID, nID string) *swagger.Note {
 			Severity:  "HIGH",
 			Details: []swagger.Detail{
 				{
-					CpeUri:  "cpe:/o:debian:debian_linux:7",
+					CpeUri:   "cpe:/o:debian:debian_linux:7",
 					Package_: "icu",
 					Description: "Stack-based buffer overflow in the ures_getByKeyWithFallback function in " +
 						"common/uresbund.cpp in International Components for Unicode (ICU) before 54.1 for C/C++ allows " +
@@ -91,7 +92,7 @@ func note(pID, nID string) *swagger.Note {
 					},
 				},
 				{
-					CpeUri:  "cpe:/o:debian:debian_linux:8",
+					CpeUri:   "cpe:/o:debian:debian_linux:8",
 					Package_: "icu",
 					Description: "Stack-based buffer overflow in the ures_getByKeyWithFallback function in " +
 						"common/uresbund.cpp in International Components for Unicode (ICU) before 54.1 for C/C++ allows " +
@@ -111,7 +112,7 @@ func note(pID, nID string) *swagger.Note {
 					},
 				},
 				{
-					CpeUri:  "cpe:/o:debian:debian_linux:9",
+					CpeUri:   "cpe:/o:debian:debian_linux:9",
 					Package_: "icu",
 					Description: "Stack-based buffer overflow in the ures_getByKeyWithFallback function in " +
 						"common/uresbund.cpp in International Components for Unicode (ICU) before 54.1 for C/C++ allows " +
@@ -131,7 +132,7 @@ func note(pID, nID string) *swagger.Note {
 					},
 				},
 				{
-					CpeUri:  "cpe:/o:canonical:ubuntu_linux:14.04",
+					CpeUri:   "cpe:/o:canonical:ubuntu_linux:14.04",
 					Package_: "andriod",
 					Description: "Stack-based buffer overflow in the ures_getByKeyWithFallback function in " +
 						"common/uresbund.cpp in International Components for Unicode (ICU) before 54.1 for C/C++ allows " +
