@@ -1,0 +1,21 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "tszr7JJNLyWwyd5PCvy3IoQ6zdU=",
+			"path": "github.com/go-resty/resty",
+			"revision": "9ac9c42358f7c3c69ac9f8610e8790d7c338e85d",
+			"revisionTime": "2017-09-25T19:29:30Z",
+			"version": "v1.0",
+			"versionExact": "v1.0"
+		},
+		{
+			"checksumSHA1": "iN//qSunKGImecnRCcQrGTFgJMk=",
+			"path": "golang.org/x/net/publicsuffix",
+			"revision": "a04bdaca5b32abe1c069418fb7088ae607de5bd0",
+			"revisionTime": "2017-10-03T05:09:24Z"
+		}
+	],
+	"rootPath": "github.com/grafeas/client-go"
+}
