@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **LayerInfo** | [**[]Layer**](Layer.md) | This contains layer-specific metadata, if populated it has length “distance” and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer. | [optional] [default to null]
 **BaseResourceUrl** | **string** | This contains the base image url for the derived image Occurrence @OutputOnly | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

@@ -14,11 +14,12 @@ Name | Type | Description | Notes
 **Installation** | [**Installation**](Installation.md) | Describes the installation of a package on the linked resource. | [optional] [default to null]
 **Deployment** | [**Deployment**](Deployment.md) | Describes the deployment of an artifact on a runtime. | [optional] [default to null]
 **Discovered** | [**Discovered**](Discovered.md) | Describes the initial scan status for this resource. | [optional] [default to null]
+**Attestation** | [**Attestation**](Attestation.md) | Describes an attestation of an artifact. | [optional] [default to null]
 **Remediation** | **string** | A description of actions that can be taken to remedy the note | [optional] [default to null]
 **CreateTime** | **string** | The time this occurrence was created. @OutputOnly | [optional] [default to null]
 **UpdateTime** | **string** | The time this occurrence was last updated. @OutputOnly | [optional] [default to null]
 **OperationName** | **string** | The name of the operation that created this note. | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

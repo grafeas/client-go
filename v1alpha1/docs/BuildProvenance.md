@@ -19,6 +19,6 @@ Name | Type | Description | Notes
 **BuildOptions** | **map[string]string** | Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details. | [optional] [default to null]
 **BuilderVersion** | **string** | Version string of the builder at the time this build was executed. | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

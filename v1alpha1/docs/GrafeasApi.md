@@ -50,7 +50,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CreateOccurrence**
 > Occurrence CreateOccurrence($projectsId, $occurrence)
@@ -80,7 +80,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteNote**
 > Empty DeleteNote($projectsId, $notesId)
@@ -110,7 +110,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteOccurrence**
 > Empty DeleteOccurrence($projectsId, $occurrencesId)
@@ -140,7 +140,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetNote**
 > Note GetNote($projectsId, $notesId)
@@ -170,7 +170,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetOccurrence**
 > Occurrence GetOccurrence($projectsId, $occurrencesId)
@@ -200,7 +200,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetOccurrenceNote**
 > Note GetOccurrenceNote($projectsId, $occurrencesId)
@@ -230,7 +230,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetOperation**
 > Operation GetOperation($projectsId, $operationsId)
@@ -260,7 +260,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ListNoteOccurrences**
 > ListNoteOccurrencesResponse ListNoteOccurrences($projectsId, $notesId, $filter, $pageSize, $pageToken)
@@ -293,7 +293,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ListNotes**
 > ListNotesResponse ListNotes($projectsId, $filter, $pageSize, $pageToken)
@@ -325,7 +325,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ListOccurrences**
 > ListOccurrencesResponse ListOccurrences($projectsId, $filter, $pageSize, $pageToken)
@@ -357,7 +357,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ListOperations**
 > ListOperationsResponse ListOperations($projectsId, $filter, $pageSize, $pageToken)
@@ -389,7 +389,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateNote**
 > Note UpdateNote($projectsId, $notesId, $note)
@@ -420,7 +420,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateOccurrence**
 > Occurrence UpdateOccurrence($projectsId, $occurrencesId, $occurrence)
@@ -451,7 +451,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateOperation**
 > Operation UpdateOperation($projectsId, $operationsId, $body)
@@ -482,5 +482,5 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to README]](../v1alpha1/README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -6,6 +6,6 @@ Name | Type | Description | Notes
 **ResourceUrl** | **string** | The resource_url for the resource representing the basis of associated occurrence images. | [optional] [default to null]
 **Fingerprint** | [**Fingerprint**](Fingerprint.md) | The fingerprint of the base image | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

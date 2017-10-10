@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **AliasName** | **string** | The name of an alias (branch, tag, etc.). | [optional] [default to null]
 **AliasContext** | [**AliasContext**](AliasContext.md) | An alias, which may be a branch or tag. | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

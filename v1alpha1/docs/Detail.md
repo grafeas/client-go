@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **Description** | **string** | A vendor-specific description of this note. | [optional] [default to null]
 **FixedLocation** | [**VulnerabilityLocation**](VulnerabilityLocation.md) | The fix for this specific package version. | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

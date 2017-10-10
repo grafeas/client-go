@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **KeyId** | **string** | An ID for the key used to sign.  This could be either an ID for the key stored in &#x60;public_key&#x60; (e.g., the ID or fingerprint for a PGP key, or the CN for a cert), or a reference to an external key (e.g., a reference to a key in Cloud KMS). | [optional] [default to null]
 **KeyType** | **string** | The type of the key, either stored in &#x60;public_key&#x60; or referenced in &#x60;key_id&#x60; | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

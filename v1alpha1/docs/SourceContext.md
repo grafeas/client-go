@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **Gerrit** | [**GerritSourceContext**](GerritSourceContext.md) | A SourceContext referring to a Gerrit project. | [optional] [default to null]
 **Git** | [**GitSourceContext**](GitSourceContext.md) | A SourceContext referring to any third party Git repo (e.g. GitHub). | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

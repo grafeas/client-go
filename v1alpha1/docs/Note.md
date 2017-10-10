@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **Package_** | [**ModelPackage**](Package.md) | A note describing a package hosted by various package managers. | [optional] [default to null]
 **Deployable** | [**Deployable**](Deployable.md) | A note describing something that can be deployed. | [optional] [default to null]
 **Discovery** | [**Discovery**](Discovery.md) | A note describing a project/analysis type. | [optional] [default to null]
+**AttestationAuthority** | [**AttestationAuthority**](AttestationAuthority.md) | A note describing an attestation role. | [optional] [default to null]
 **RelatedUrl** | [**[]RelatedUrl**](RelatedUrl.md) | Urls associated with this note | [optional] [default to null]
 **ExpirationTime** | **string** | Time of expiration for this Note, null if Note currently does not expire. | [optional] [default to null]
 **CreateTime** | **string** | The time this note was created. This field can be used as a filter in list requests. @OutputOnly | [optional] [default to null]
@@ -20,6 +21,6 @@ Name | Type | Description | Notes
 **OperationName** | **string** | The name of the operation that created this note. | [optional] [default to null]
 **RelatedNoteNames** | **[]string** | Other notes related to this note. | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

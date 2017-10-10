@@ -22,15 +22,8 @@
 
 package v1alpha1
 
-// The location of the vulnerability
-type VulnerabilityLocation struct {
+// Note kind that represents a logical attestation \"role\" or \"authority\".  For example, an organization might have one AttestationAuthority for \"QA\" and one for \"build\".  This Note is intended to act strictly as a grouping mechanism for the attached Occurrences (Attestations).  This grouping mechanism also provides a security boundary, since IAM ACLs gate the ability for a principle to attach an Occurrence to a given Note.  It also provides a single point of lookup to find all attached Attestation Occurrences, even if they don't all live in the same project.
+type AttestationAuthority struct {
 
-	// The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) format. Examples include distro or storage location for vulnerable jar. This field can be used as a filter in list requests.
-	CpeUri string `json:"cpeUri,omitempty"`
-
-	// The package being described.
-	Package_ string `json:"package,omitempty"`
-
-	// The version of the package being described. This field can be used as a filter in list requests.
-	Version Version `json:"version,omitempty"`
+	Hint AttestationAuthorityHint `json:"hint,omitempty"`
 }

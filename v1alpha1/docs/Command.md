@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **Id** | **string** | Optional unique identifier for this Command, used in wait_for to reference this Command as a dependency. | [optional] [default to null]
 **WaitFor** | **[]string** | The ID(s) of the Command(s) that this Command depends on. | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

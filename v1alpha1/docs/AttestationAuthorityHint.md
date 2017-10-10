@@ -1,10 +1,9 @@
-# GitSourceContext
+# AttestationAuthorityHint
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | **string** | Git repository URL. | [optional] [default to null]
-**RevisionId** | **string** | Git commit hash. required. | [optional] [default to null]
+**HumanReadableName** | **string** | The human readable name of this Attestation Authority, e.g. \&quot;qa\&quot;. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

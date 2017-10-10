@@ -22,15 +22,9 @@
 
 package v1alpha1
 
-// The location of the vulnerability
-type VulnerabilityLocation struct {
+// This submessage provides human-readable hints about the purpose of the AttestationAuthority.  Because the name of a Note acts as its resource reference, it is important to disambiguate the canonical name of the Note (which might be a UUID for security purposes) from \"readable\" names more suitable for debug output.  Note that these hints should NOT be used to look up AttestationAuthorities in security sensitive contexts, such as when looking up Attestations to verify.
+type AttestationAuthorityHint struct {
 
-	// The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) format. Examples include distro or storage location for vulnerable jar. This field can be used as a filter in list requests.
-	CpeUri string `json:"cpeUri,omitempty"`
-
-	// The package being described.
-	Package_ string `json:"package,omitempty"`
-
-	// The version of the package being described. This field can be used as a filter in list requests.
-	Version Version `json:"version,omitempty"`
+	// The human readable name of this Attestation Authority, e.g. \"qa\".
+	HumanReadableName string `json:"humanReadableName,omitempty"`
 }

@@ -58,6 +58,9 @@ type Occurrence struct {
 	// Describes the initial scan status for this resource.
 	Discovered Discovered `json:"discovered,omitempty"`
 
+	// Describes an attestation of an artifact.
+	Attestation Attestation `json:"attestation,omitempty"`
+
 	// A description of actions that can be taken to remedy the note
 	Remediation string `json:"remediation,omitempty"`
 
