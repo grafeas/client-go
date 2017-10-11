@@ -22,15 +22,8 @@
 
 package v1alpha1
 
-// The location of the vulnerability
-type VulnerabilityLocation struct {
+// Occurrence that represents a single \"attestation\".  The authenticity of an Attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust.  In this circumstance, the AttestationAuthority to which this Attestation is attached is primarily useful for look-up (how to find this Attestation if you already know the Authority and artifact to be verified) and intent (which authority was this attestation intended to sign for).
+type Attestation struct {
 
-	// The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) format. Examples include distro or storage location for vulnerable jar. This field can be used as a filter in list requests.
-	CpeUri string `json:"cpeUri,omitempty"`
-
-	// The package being described.
-	Package_ string `json:"package,omitempty"`
-
-	// The version of the package being described. This field can be used as a filter in list requests.
-	Version Version `json:"version,omitempty"`
+	PgpSignedAttestation PgpSignedAttestation `json:"pgpSignedAttestation,omitempty"`
 }

@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **Object** | **string** | Google Cloud Storage object containing source. | [optional] [default to null]
 **Generation** | **string** | Google Cloud Storage generation for the object. | [optional] [default to null]
 
-[[Back to Model list]](../v1alpha1/README.md#documentation-for-models) [[Back to API list]](../v1alpha1/README.md#documentation-for-api-endpoints) [[Back to README]](../v1alpha1/README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

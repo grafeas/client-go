@@ -55,6 +55,9 @@ type Note struct {
 	// A note describing a project/analysis type.
 	Discovery Discovery `json:"discovery,omitempty"`
 
+	// A note describing an attestation role.
+	AttestationAuthority AttestationAuthority `json:"attestationAuthority,omitempty"`
+
 	// Urls associated with this note
 	RelatedUrl []RelatedUrl `json:"relatedUrl,omitempty"`
 
