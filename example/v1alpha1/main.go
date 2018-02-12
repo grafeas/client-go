@@ -41,7 +41,8 @@ func main() {
 	}
 
 	oPID := "scanning-customer"
-	o := Occurrence(createdN.Name)
+	o := Occurrence(createdN.Name, fmt.Sprintf("projects/%v/occurrences/%v", nPID, oPID))
+
 	createdO, _, err := client.CreateOccurrence(oPID, *o)
 	if err != nil {
 		log.Fatalf("Error creating occurrence %v", err)
@@ -51,9 +52,10 @@ func main() {
 
 	_, oID, pErr := name.ParseOccurrence(createdO.Name)
 	if pErr != nil {
-		log.Fatalf("Unable to get occurenceId from occurrence name %v: %v", createdO.Name, err)
+		log.Fatalf("Unable to get occurenceId from occurrence name %v: %v", createdO.Name, pErr)
 	}
-	if got, _, err := client.GetOccurrence(oPID, oID); err != nil {
+
+	if got, _, err := client.GetOccurrence(nPID, oID); err != nil {
 		log.Printf("Error getting occurrence %v", err)
 	} else {
 		log.Printf("Succesfully got occurrence: %v", got)
@@ -165,8 +167,10 @@ func note(pID, nID string) *v1alpha1.Note {
 	}
 }
 
-func Occurrence(noteName string) *v1alpha1.Occurrence {
+/* Specify occurrence instead of using default value of empty string */
+func Occurrence(noteName, occurrenceName string) *v1alpha1.Occurrence {
 	return &v1alpha1.Occurrence{
+		Name:             occurrenceName,
 		ResourceUrl: "gcr.io/foo/bar",
 		NoteName:    noteName,
 		Kind:        "PACKAGE_VULNERABILITY",
