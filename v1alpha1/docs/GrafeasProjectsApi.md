@@ -18,7 +18,7 @@ Creates a new `Project`.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **body** | [**ApiProject**](ApiProject.md)|  | 
 
 ### Return type
@@ -44,7 +44,7 @@ Deletes the given `Project` from the system.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **name** | **string**|  | 
 
 ### Return type
@@ -70,7 +70,7 @@ Returns the requested `Project`.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **name** | **string**|  | 
 
 ### Return type
@@ -96,17 +96,17 @@ Lists `Projects`
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
- **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***ListProjectsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
+Optional parameters are passed through a pointer to a ListProjectsOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string**| The filter expression. | 
- **pageSize** | **int32**| Number of projects to return in the list. | 
- **pageToken** | **string**| Token to provide to skip to a particular spot in the list. | 
+ **filter** | **optional.String**| The filter expression. | 
+ **pageSize** | **optional.Int32**| Number of projects to return in the list. | 
+ **pageToken** | **optional.String**| Token to provide to skip to a particular spot in the list. | 
 
 ### Return type
 

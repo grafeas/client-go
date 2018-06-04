@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **ExpirationTime** | [**time.Time**](time.Time.md) | Time of expiration for this note, null if note does not expire. | [optional] [default to null]
 **CreateTime** | [**time.Time**](time.Time.md) | Output only. The time this note was created. This field can be used as a filter in list requests. | [optional] [default to null]
 **UpdateTime** | [**time.Time**](time.Time.md) | Output only. The time this note was last updated. This field can be used as a filter in list requests. | [optional] [default to null]
+**OperationName** | **string** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

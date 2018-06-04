@@ -22,7 +22,7 @@ Creates a new `Note`.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **parent** | **string**|  | 
   **body** | [**ApiNote**](ApiNote.md)|  | 
 
@@ -49,7 +49,7 @@ Creates a new `Occurrence`. Use this method to create `Occurrences` for a resour
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **parent** | **string**|  | 
   **body** | [**ApiOccurrence**](ApiOccurrence.md)|  | 
 
@@ -76,7 +76,7 @@ Creates a new `Operation`.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **parent** | **string**|  | 
   **body** | [**ApiCreateOperationRequest**](ApiCreateOperationRequest.md)|  | 
 
@@ -103,7 +103,7 @@ Gets the `Note` attached to the given `Occurrence`.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **name** | **string**|  | 
 
 ### Return type
@@ -129,19 +129,19 @@ Lists `Occurrences` referencing the specified `Note`. Use this method to get all
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **name** | **string**|  | 
- **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+ **optional** | ***ListNoteOccurrencesOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
+Optional parameters are passed through a pointer to a ListNoteOccurrencesOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**|  | 
- **filter** | **string**| The filter expression. | 
- **pageSize** | **int32**| Number of notes to return in the list. | 
- **pageToken** | **string**| Token to provide to skip to a particular spot in the list. | 
+
+ **filter** | **optional.String**| The filter expression. | 
+ **pageSize** | **optional.Int32**| Number of notes to return in the list. | 
+ **pageToken** | **optional.String**| Token to provide to skip to a particular spot in the list. | 
 
 ### Return type
 
@@ -166,19 +166,19 @@ Lists all `Notes` for a given project.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **parent** | **string**|  | 
- **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+ **optional** | ***ListNotesOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
+Optional parameters are passed through a pointer to a ListNotesOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parent** | **string**|  | 
- **filter** | **string**| The filter expression. | 
- **pageSize** | **int32**| Number of notes to return in the list. | 
- **pageToken** | **string**| Token to provide to skip to a particular spot in the list. | 
+
+ **filter** | **optional.String**| The filter expression. | 
+ **pageSize** | **optional.Int32**| Number of notes to return in the list. | 
+ **pageToken** | **optional.String**| Token to provide to skip to a particular spot in the list. | 
 
 ### Return type
 
@@ -203,19 +203,19 @@ Lists active `Occurrences` for a given project matching the filters.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **parent** | **string**|  | 
- **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+ **optional** | ***ListOccurrencesOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
+Optional parameters are passed through a pointer to a ListOccurrencesOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parent** | **string**|  | 
- **filter** | **string**| The filter expression. | 
- **pageSize** | **int32**| Number of occurrences to return in the list. | 
- **pageToken** | **string**| Token to provide to skip to a particular spot in the list. | 
+
+ **filter** | **optional.String**| The filter expression. | 
+ **pageSize** | **optional.Int32**| Number of occurrences to return in the list. | 
+ **pageToken** | **optional.String**| Token to provide to skip to a particular spot in the list. | 
 
 ### Return type
 
@@ -240,7 +240,7 @@ Updates an existing `Note`.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **name** | **string**|  | 
   **body** | [**ApiNote**](ApiNote.md)|  | 
 
