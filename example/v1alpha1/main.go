@@ -24,6 +24,7 @@ import (
 func main() {
 	client := v1alpha1.NewGrafeasApi()
 	nPID := "best-vuln-scanner"
+	// Ensure that the project "best-vuln-scanner" is created as mentioned in README
 	nID := "CVE-2014-9911"
 	n := note(nPID, nID)
 	createdN, _, err := client.CreateNote(nPID, nID, *n)
@@ -41,7 +42,10 @@ func main() {
 	}
 
 	oPID := "scanning-customer"
-	o := Occurrence(createdN.Name)
+	// Ensure that the project "scanning-customer" is created as mentioned in README
+	occurrence1 := "occurrence-1"
+	o := Occurrence(createdN.Name, fmt.Sprintf("projects/%v/occurrences/%v", oPID, occurrence1))
+
 	createdO, _, err := client.CreateOccurrence(oPID, *o)
 	if err != nil {
 		log.Fatalf("Error creating occurrence %v", err)
@@ -165,8 +169,10 @@ func note(pID, nID string) *v1alpha1.Note {
 	}
 }
 
-func Occurrence(noteName string) *v1alpha1.Occurrence {
+/* Specify occurrence instead of using default value of empty string */
+func Occurrence(noteName, occurrenceName string) *v1alpha1.Occurrence {
 	return &v1alpha1.Occurrence{
+		Name:             occurrenceName,
 		ResourceUrl: "gcr.io/foo/bar",
 		NoteName:    noteName,
 		Kind:        "PACKAGE_VULNERABILITY",
