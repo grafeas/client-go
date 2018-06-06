@@ -24,6 +24,7 @@ import (
 func main() {
 	client := v1alpha1.NewGrafeasApi()
 	nPID := "best-vuln-scanner"
+	// Ensure that the project "best-vuln-scanner" is created as mentioned in README
 	nID := "CVE-2014-9911"
 	n := note(nPID, nID)
 	createdN, _, err := client.CreateNote(nPID, nID, *n)
@@ -41,7 +42,9 @@ func main() {
 	}
 
 	oPID := "scanning-customer"
-	o := Occurrence(createdN.Name, fmt.Sprintf("projects/%v/occurrences/%v", nPID, oPID))
+	// Ensure that the project "scanning-customer" is created as mentioned in README
+	occurrence1 := "occurrence-1"
+	o := Occurrence(createdN.Name, fmt.Sprintf("projects/%v/occurrences/%v", oPID, occurrence1))
 
 	createdO, _, err := client.CreateOccurrence(oPID, *o)
 	if err != nil {
@@ -52,10 +55,9 @@ func main() {
 
 	_, oID, pErr := name.ParseOccurrence(createdO.Name)
 	if pErr != nil {
-		log.Fatalf("Unable to get occurenceId from occurrence name %v: %v", createdO.Name, pErr)
+		log.Fatalf("Unable to get occurenceId from occurrence name %v: %v", createdO.Name, err)
 	}
-
-	if got, _, err := client.GetOccurrence(nPID, oID); err != nil {
+	if got, _, err := client.GetOccurrence(oPID, oID); err != nil {
 		log.Printf("Error getting occurrence %v", err)
 	} else {
 		log.Printf("Succesfully got occurrence: %v", got)

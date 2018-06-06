@@ -8,7 +8,10 @@ go get github.com/Grafeas/client-go
 go run grafeas/samples/server/go-server/api/server/main/main.go
 
 # v1alpha1 client-go example relies on the existence of project "best-vuln-scanner"
+# for Note and the project "scanning-customer" for Occurrence
 # Use the following curl command to create the project "best-vuln-scanner"
 curl -H "Accept: application/json" -H "Content-type: application/json" -d "{\"name\":\"projects/best-vuln-scanner\"}" -X POST  http://localhost:8080/v1alpha1/projects
 
+# Use the following curl command to create the project "scanning-customer"
+curl -H "Accept: application/json" -H "Content-type: application/json" -d "{\"name\":\"projects/scanning-customer\"}" -X POST  http://localhost:8080/v1alpha1/projects
 go run client-go/example/v1alpha1/main.go
