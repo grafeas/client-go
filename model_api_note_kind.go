@@ -8,12 +8,12 @@
  */
 
 package grafeas
-// ApiNoteKind : This must be 1:1 with members of our oneofs, it can be used for filtering Note and Occurrence on their kind.   - KIND_UNSPECIFIED: Unknown  - PACKAGE_VULNERABILITY: The note and occurrence represent a package vulnerability.  - BUILD_DETAILS: The note and occurrence assert build provenance.  - IMAGE_BASIS: This represents an image basis relationship.  - PACKAGE_MANAGER: This represents a package installed via a package manager.  - DEPLOYABLE: The note and occurrence track deployment events.  - DISCOVERY: The note and occurrence track the initial discovery status of a resource.  - ATTESTATION_AUTHORITY: This represents a logical \"role\" that can attest to artifacts.
+// ApiNoteKind : This must be 1:1 with members of our oneofs, it can be used for filtering Note and Occurrence on their kind.   - NOTE_KIND_UNSPECIFIED: Unknown  - PACKAGE_VULNERABILITY: The note and occurrence represent a package vulnerability.  - BUILD_DETAILS: The note and occurrence assert build provenance.  - IMAGE_BASIS: This represents an image basis relationship.  - PACKAGE_MANAGER: This represents a package installed via a package manager.  - DEPLOYABLE: The note and occurrence track deployment events.  - DISCOVERY: The note and occurrence track the initial discovery status of a resource.  - ATTESTATION_AUTHORITY: This represents a logical \"role\" that can attest to artifacts.
 type ApiNoteKind string
 
 // List of apiNoteKind
 const (
-	KIND_UNSPECIFIED ApiNoteKind = "KIND_UNSPECIFIED"
+	NOTE_KIND_UNSPECIFIED ApiNoteKind = "KIND_UNSPECIFIED"
 
 	PACKAGE_VULNERABILITY ApiNoteKind = "PACKAGE_VULNERABILITY"
 
