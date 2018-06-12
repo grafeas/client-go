@@ -54,4 +54,6 @@ type ApiNote struct {
 
 	// Output only. The time this note was last updated. This field can be used as a filter in list requests.
 	UpdateTime time.Time `json:"update_time,omitempty"`
+
+	OperationName string `json:"operation_name,omitempty"`
 }

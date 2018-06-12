@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **Remediation** | **string** |  | [optional] [default to null]
 **CreateTime** | [**time.Time**](time.Time.md) | Output only. The time this &#x60;Occurrence&#x60; was created. | [optional] [default to null]
 **UpdateTime** | [**time.Time**](time.Time.md) | Output only. The time this &#x60;Occurrence&#x60; was last updated. | [optional] [default to null]
+**OperationName** | **string** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

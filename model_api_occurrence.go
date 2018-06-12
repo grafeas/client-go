@@ -54,4 +54,6 @@ type ApiOccurrence struct {
 
 	// Output only. The time this `Occurrence` was last updated.
 	UpdateTime time.Time `json:"update_time,omitempty"`
+
+	OperationName string `json:"operation_name,omitempty"`
 }

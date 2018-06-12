@@ -1667,6 +1667,7 @@ definitions:
                 epoch: 6
                 revision: "revision"
             severity_name: "severity_name"
+        operation_name: "operation_name"
         remediation: "remediation"
         update_time: "2000-01-23T04:56:07.000+00:00"
         derived_image_details:
@@ -1919,6 +1920,7 @@ definitions:
                 epoch: 6
                 revision: "revision"
             severity_name: "severity_name"
+        operation_name: "operation_name"
         remediation: "remediation"
         update_time: "2000-01-23T04:56:07.000+00:00"
         derived_image_details:
@@ -2189,6 +2191,7 @@ definitions:
           url: "url"
         expiration_time: "2000-01-23T04:56:07.000+00:00"
         long_description: "long_description"
+        operation_name: "operation_name"
         update_time: "2000-01-23T04:56:07.000+00:00"
         base_image:
           resource_url: "resource_url"
@@ -2294,6 +2297,7 @@ definitions:
           url: "url"
         expiration_time: "2000-01-23T04:56:07.000+00:00"
         long_description: "long_description"
+        operation_name: "operation_name"
         update_time: "2000-01-23T04:56:07.000+00:00"
         base_image:
           resource_url: "resource_url"
@@ -2415,6 +2419,7 @@ definitions:
                 epoch: 6
                 revision: "revision"
             severity_name: "severity_name"
+        operation_name: "operation_name"
         remediation: "remediation"
         update_time: "2000-01-23T04:56:07.000+00:00"
         derived_image_details:
@@ -2667,6 +2672,7 @@ definitions:
                 epoch: 6
                 revision: "revision"
             severity_name: "severity_name"
+        operation_name: "operation_name"
         remediation: "remediation"
         update_time: "2000-01-23T04:56:07.000+00:00"
         derived_image_details:
@@ -2910,6 +2916,9 @@ definitions:
         format: "date-time"
         description: "Output only. The time this note was last updated. This field\
           \ can be used as\na filter in list requests."
+      operation_name:
+        type: "string"
+        title: "The name of the `Operation` in the form\n\"projects/{project_id}/operation/{OPERATION_ID}\""
     description: "Provides a detailed description of a `Note`."
     example:
       short_description: "short_description"
@@ -2995,6 +3004,7 @@ definitions:
         url: "url"
       expiration_time: "2000-01-23T04:56:07.000+00:00"
       long_description: "long_description"
+      operation_name: "operation_name"
       update_time: "2000-01-23T04:56:07.000+00:00"
       base_image:
         resource_url: "resource_url"
@@ -3091,6 +3101,9 @@ definitions:
         type: "string"
         format: "date-time"
         description: "Output only. The time this `Occurrence` was last updated."
+      operation_name:
+        type: "string"
+        title: "The name of the `Operation` in the form\n\"projects/{project_id}/operation/{OPERATION_ID}\""
     description: "`Occurrence` includes information about analysis occurrences for\
       \ an image."
     example:
@@ -3176,6 +3189,7 @@ definitions:
               epoch: 6
               revision: "revision"
           severity_name: "severity_name"
+      operation_name: "operation_name"
       remediation: "remediation"
       update_time: "2000-01-23T04:56:07.000+00:00"
       derived_image_details:
@@ -3800,20 +3814,24 @@ definitions:
     properties:
       type_url:
         type: "string"
-        description: "A URL/resource name whose content describes the type of the\n\
-          serialized protocol buffer message.\n\nFor URLs which use the scheme `http`,\
-          \ `https`, or no scheme, the\nfollowing restrictions and interpretations\
-          \ apply:\n\n* If no scheme is provided, `https` is assumed.\n* The last\
-          \ segment of the URL's path must represent the fully\n  qualified name of\
-          \ the type (as in `path/google.protobuf.Duration`).\n  The name should be\
-          \ in a canonical form (e.g., leading \".\" is\n  not accepted).\n* An HTTP\
-          \ GET on the URL must yield a [google.protobuf.Type][]\n  value in binary\
-          \ format, or produce an error.\n* Applications are allowed to cache lookup\
-          \ results based on the\n  URL, or have them precompiled into a binary to\
-          \ avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n\
-          \  on changes to types. (Use versioned type names to manage\n  breaking\
-          \ changes.)\n\nSchemes other than `http`, `https` (or the empty scheme)\
-          \ might be\nused with implementation specific semantics."
+        description: "A URL/resource name that uniquely identifies the type of the\
+          \ serialized\nprotocol buffer message. The last segment of the URL's path\
+          \ must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`).\
+          \ The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\
+          \nIn practice, teams usually precompile into the binary all types that they\n\
+          expect it to use in the context of Any. However, for URLs which use the\n\
+          scheme `http`, `https`, or no scheme, one can optionally set up a type\n\
+          server that maps type URLs to message definitions as follows:\n\n* If no\
+          \ scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must\
+          \ yield a [google.protobuf.Type][]\n  value in binary format, or produce\
+          \ an error.\n* Applications are allowed to cache lookup results based on\
+          \ the\n  URL, or have them precompiled into a binary to avoid any\n  lookup.\
+          \ Therefore, binary compatibility needs to be preserved\n  on changes to\
+          \ types. (Use versioned type names to manage\n  breaking changes.)\n\nNote:\
+          \ this functionality is not currently available in the official\nprotobuf\
+          \ release, and it is not used for type URLs beginning with\ntype.googleapis.com.\n\
+          \nSchemes other than `http`, `https` (or the empty scheme) might be\nused\
+          \ with implementation specific semantics."
       value:
         type: "string"
         format: "byte"
@@ -3937,10 +3955,10 @@ definitions:
       \ sub_message = 9;\n      }\n    }\n\nThe field mask can be:\n\n    mask {\n\
       \      paths: \"name\"\n    }\n\nOr:\n\n    mask {\n      paths: \"sub_message\"\
       \n    }\n\nNote that oneof type names (\"test_oneof\" in this case) cannot be\
-      \ used in\npaths.\n\n## Field Mask Verification\n\nThe implementation of the\
-      \ all the API methods, which have any FieldMask type\nfield in the request,\
-      \ should verify the included field paths, and return\n`INVALID_ARGUMENT` error\
-      \ if any path is duplicated or unmappable."
+      \ used in\npaths.\n\n## Field Mask Verification\n\nThe implementation of any\
+      \ API method which has a FieldMask type field in the\nrequest should verify\
+      \ the included field paths, and return an\n`INVALID_ARGUMENT` error if any path\
+      \ is duplicated or unmappable."
   rpcStatus:
     type: "object"
     properties:
