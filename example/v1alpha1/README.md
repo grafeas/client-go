@@ -1,9 +1,19 @@
-# Sample go server that uses the Grafeas go client library
+# Local Grafeas Testing Sample
 
-To run this server against the Grafeas reference implementation run the following:
+To help support testing, we have developed a Grafeas test server you can run locally. 
+This directory holds a sample go script that can be against the test server. 
+To see it in action, run the following commands:
 
 ```
-go get github.com/Grafeas/Greafeas/samples/server/go-server/api/
-go get github.com/Grafeas/client-go
-go run grafeas/samples/server/go-server/api/server/main/main.go
-go run client-go/example/v1alpha1/main.go
+# set where to download the go projects
+GOPATH=$(pwd)
+
+# download projects
+go get github.com/Grafeas/Grafeas/samples/server/go-server/api/server/main
+go get github.com/Grafeas/client-go/example/v1alpha1
+
+# run the Grafeas test server
+go run src/github.com/Grafeas/Grafeas/samples/server/go-server/api/server/main/main.go
+
+# run the client example (in another terminal window)
+go run src/github.com/grafeas/client-go/example/v1alpha1/main.go

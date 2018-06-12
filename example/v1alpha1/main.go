@@ -16,7 +16,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/grafeas/client-go/v1alpha1"
+	v1alpha1 "github.com/grafeas/client-go/v1alpha1"
 	"github.com/grafeas/grafeas/samples/server/go-server/api/server/name"
 	"log"
 )
