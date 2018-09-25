@@ -1,12 +1,8 @@
 ---
 swagger: "2.0"
 info:
-  description: "An API to insert and retrieve annotations on cloud artifacts."
-  version: "v1alpha1"
-  title: "Grafeas API"
-  license:
-    name: "Apache 2.0"
-    url: "https://www.apache.org/licenses/LICENSE-2.0.html"
+  version: "version not set"
+  title: "v1alpha1/proto/grafeas.proto"
 schemes:
 - "http"
 - "https"
@@ -19,7 +15,8 @@ paths:
     get:
       tags:
       - "GrafeasProjects"
-      summary: "Lists `Projects`"
+      summary: "Deletes the given `Occurrence` from the system. Use this when\nan\
+        \ `Occurrence` is no longer applicable for the given resource."
       operationId: "ListProjects"
       parameters:
       - name: "filter"
@@ -28,7 +25,6 @@ paths:
         required: false
         type: "string"
         x-exportParamName: "Filter"
-        x-optionalDataType: "String"
       - name: "page_size"
         in: "query"
         description: "Number of projects to return in the list."
@@ -36,14 +32,12 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "PageSize"
-        x-optionalDataType: "Int32"
       - name: "page_token"
         in: "query"
         description: "Token to provide to skip to a particular spot in the list."
         required: false
         type: "string"
         x-exportParamName: "PageToken"
-        x-optionalDataType: "String"
       responses:
         200:
           description: ""
@@ -52,11 +46,12 @@ paths:
     post:
       tags:
       - "GrafeasProjects"
-      summary: "Creates a new `Project`."
+      summary: "Returns the requested `Occurrence`."
       operationId: "CreateProject"
       parameters:
       - in: "body"
         name: "body"
+        description: "The project to be inserted"
         required: true
         schema:
           $ref: "#/definitions/apiProject"
@@ -70,11 +65,12 @@ paths:
     get:
       tags:
       - "GrafeasProjects"
-      summary: "Returns the requested `Project`."
+      summary: "Lists active `Occurrences` for a given project matching the filters."
       operationId: "GetProject"
       parameters:
       - name: "name"
         in: "path"
+        description: "The name of the project of the form\n\"projects/{project_id}\""
         required: true
         type: "string"
         x-exportParamName: "Name"
@@ -86,11 +82,13 @@ paths:
     delete:
       tags:
       - "GrafeasProjects"
-      summary: "Deletes the given `Project` from the system."
+      summary: "Creates a new `Occurrence`. Use this method to create `Occurrences`\n\
+        for a resource."
       operationId: "DeleteProject"
       parameters:
       - name: "name"
         in: "path"
+        description: "The name of the project of the form\n\"projects/{project_id}\""
         required: true
         type: "string"
         x-exportParamName: "Name"
@@ -107,11 +105,14 @@ paths:
       parameters:
       - name: "name"
         in: "path"
+        description: "The name of the note.\nShould be of the form \"projects/{provider_id}/notes/{note_id}\"\
+          ."
         required: true
         type: "string"
         x-exportParamName: "Name"
       - in: "body"
         name: "body"
+        description: "The updated note."
         required: true
         schema:
           $ref: "#/definitions/apiNote"
@@ -130,6 +131,7 @@ paths:
       parameters:
       - name: "name"
         in: "path"
+        description: "The name of the occurrence in the form\n\"projects/{project_id}/occurrences/{OCCURRENCE_ID}\""
         required: true
         type: "string"
         x-exportParamName: "Name"
@@ -149,6 +151,8 @@ paths:
       parameters:
       - name: "name"
         in: "path"
+        description: "The name field will contain the note name for example:\n  \"\
+          provider/{provider_id}/notes/{note_id}\""
         required: true
         type: "string"
         x-exportParamName: "Name"
@@ -158,7 +162,6 @@ paths:
         required: false
         type: "string"
         x-exportParamName: "Filter"
-        x-optionalDataType: "String"
       - name: "page_size"
         in: "query"
         description: "Number of notes to return in the list."
@@ -166,14 +169,12 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "PageSize"
-        x-optionalDataType: "Int32"
       - name: "page_token"
         in: "query"
         description: "Token to provide to skip to a particular spot in the list."
         required: false
         type: "string"
         x-exportParamName: "PageToken"
-        x-optionalDataType: "String"
       responses:
         200:
           description: ""
@@ -188,6 +189,8 @@ paths:
       parameters:
       - name: "parent"
         in: "path"
+        description: "This field contains the project ID for example: \"projects/{project_id}\"\
+          ."
         required: true
         type: "string"
         x-exportParamName: "Parent"
@@ -197,7 +200,6 @@ paths:
         required: false
         type: "string"
         x-exportParamName: "Filter"
-        x-optionalDataType: "String"
       - name: "page_size"
         in: "query"
         description: "Number of notes to return in the list."
@@ -205,14 +207,12 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "PageSize"
-        x-optionalDataType: "Int32"
       - name: "page_token"
         in: "query"
         description: "Token to provide to skip to a particular spot in the list."
         required: false
         type: "string"
         x-exportParamName: "PageToken"
-        x-optionalDataType: "String"
       responses:
         200:
           description: ""
@@ -226,11 +226,13 @@ paths:
       parameters:
       - name: "parent"
         in: "path"
+        description: "This field contains the project Id for example:\n\"project/{project_id}"
         required: true
         type: "string"
         x-exportParamName: "Parent"
       - in: "body"
         name: "body"
+        description: "The Note to be inserted"
         required: true
         schema:
           $ref: "#/definitions/apiNote"
@@ -249,6 +251,7 @@ paths:
       parameters:
       - name: "parent"
         in: "path"
+        description: "This contains the project Id for example: projects/{project_id}."
         required: true
         type: "string"
         x-exportParamName: "Parent"
@@ -258,7 +261,6 @@ paths:
         required: false
         type: "string"
         x-exportParamName: "Filter"
-        x-optionalDataType: "String"
       - name: "page_size"
         in: "query"
         description: "Number of occurrences to return in the list."
@@ -266,14 +268,12 @@ paths:
         type: "integer"
         format: "int32"
         x-exportParamName: "PageSize"
-        x-optionalDataType: "Int32"
       - name: "page_token"
         in: "query"
         description: "Token to provide to skip to a particular spot in the list."
         required: false
         type: "string"
         x-exportParamName: "PageToken"
-        x-optionalDataType: "String"
       responses:
         200:
           description: ""
@@ -288,11 +288,13 @@ paths:
       parameters:
       - name: "parent"
         in: "path"
+        description: "This field contains the project Id for example: \"projects/{project_id}\""
         required: true
         type: "string"
         x-exportParamName: "Parent"
       - in: "body"
         name: "body"
+        description: "The occurrence to be inserted"
         required: true
         schema:
           $ref: "#/definitions/apiOccurrence"
@@ -311,6 +313,7 @@ paths:
       parameters:
       - name: "parent"
         in: "path"
+        description: "The projectId that this operation should be created under."
         required: true
         type: "string"
         x-exportParamName: "Parent"
@@ -1512,7 +1515,8 @@ definitions:
       \ in a\nconsumer's project at the start of analysis. The occurrence's operation\
       \ will\nindicate the status of the analysis. Absence of an occurrence linked\
       \ to this\nnote for a resource indicates that analysis hasn't started."
-    example: {}
+    example:
+      analysis_kind: null
   apiFileHashes:
     type: "object"
     properties:
@@ -2217,7 +2221,8 @@ definitions:
           resource_uri:
           - "resource_uri"
           - "resource_uri"
-        discovery: {}
+        discovery:
+          analysis_kind: null
         name: "name"
         build_type:
           signature:
@@ -2323,7 +2328,8 @@ definitions:
           resource_uri:
           - "resource_uri"
           - "resource_uri"
-        discovery: {}
+        discovery:
+          analysis_kind: null
         name: "name"
         build_type:
           signature:
@@ -3030,7 +3036,8 @@ definitions:
         resource_uri:
         - "resource_uri"
         - "resource_uri"
-      discovery: {}
+      discovery:
+        analysis_kind: null
       name: "name"
       build_type:
         signature:
