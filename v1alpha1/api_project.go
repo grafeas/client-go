@@ -9,8 +9,9 @@
 
 package grafeas
 
-// Provides detailed description of a `Project`.
+// Describes a Grafeas project.
 type ApiProject struct {
 
+	// The name of the project in the form of `projects/{PROJECT_ID}`.
 	Name string `json:"name,omitempty"`
 }

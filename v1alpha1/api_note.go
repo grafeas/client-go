@@ -16,6 +16,7 @@ import (
 // Provides a detailed description of a `Note`.
 type ApiNote struct {
 
+	// The name of the note in the form \"projects/{PROJECT_ID}/notes/{NOTE_ID}\".
 	Name string `json:"name,omitempty"`
 
 	// A one sentence description of this `Note`.
@@ -45,6 +46,10 @@ type ApiNote struct {
 	// A note describing a provider/analysis type.
 	Discovery *ApiDiscovery `json:"discovery,omitempty"`
 
+	// A note describing an attestation role.
+	AttestationAuthority *ApiAttestationAuthority `json:"attestation_authority,omitempty"`
+
+	// URLs associated with this note.
 	RelatedUrl []NoteRelatedUrl `json:"related_url,omitempty"`
 
 	// Time of expiration for this note, null if note does not expire.
@@ -56,5 +61,6 @@ type ApiNote struct {
 	// Output only. The time this note was last updated. This field can be used as a filter in list requests.
 	UpdateTime time.Time `json:"update_time,omitempty"`
 
+	// The name of the `Operation` in the form \"projects/{PROJECT_ID}/operations/{OPERATION_ID}\".
 	OperationName string `json:"operation_name,omitempty"`
 }

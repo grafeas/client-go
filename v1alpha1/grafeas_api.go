@@ -97,7 +97,7 @@ func (a *GrafeasApiService) CreateNote(ctx context.Context, parent string, body 
 /* GrafeasApiService Creates a new &#x60;Occurrence&#x60;. Use this method to create &#x60;Occurrences&#x60; for a resource.
  * @param ctx context.Context for authentication, logging, tracing, etc.
  @param parent This field contains the project Id for example: \&quot;projects/{project_id}\&quot;
- @param body The occurrence to be inserted
+ @param body The occurrence to be inserted.
  @return ApiOccurrence*/
 func (a *GrafeasApiService) CreateOccurrence(ctx context.Context, parent string, body ApiOccurrence) (ApiOccurrence,  *http.Response, error) {
 	var (

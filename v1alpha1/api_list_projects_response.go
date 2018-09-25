@@ -9,6 +9,7 @@
 
 package grafeas
 
+// Response for listing projects.
 type ApiListProjectsResponse struct {
 
 	// The projects requested.

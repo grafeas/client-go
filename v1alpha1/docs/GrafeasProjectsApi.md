@@ -19,7 +19,7 @@ Returns the requested `Occurrence`.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
-  **body** | [**ApiProject**](ApiProject.md)| The project to be inserted | 
+  **body** | [**ApiProject**](ApiProject.md)| The project to create. | 
 
 ### Return type
 
@@ -45,7 +45,7 @@ Creates a new `Occurrence`. Use this method to create `Occurrences` for a resour
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
-  **name** | **string**| The name of the project of the form \&quot;projects/{project_id}\&quot; | 
+  **name** | **string**| The name of the project in the form of &#x60;projects/{PROJECT_ID}&#x60;. | 
 
 ### Return type
 
@@ -71,7 +71,7 @@ Lists active `Occurrences` for a given project matching the filters.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
-  **name** | **string**| The name of the project of the form \&quot;projects/{project_id}\&quot; | 
+  **name** | **string**| The name of the project in the form of &#x60;projects/{PROJECT_ID}&#x60;. | 
 
 ### Return type
 

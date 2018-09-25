@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
   **parent** | **string**| This field contains the project Id for example: \&quot;projects/{project_id}\&quot; | 
-  **body** | [**ApiOccurrence**](ApiOccurrence.md)| The occurrence to be inserted | 
+  **body** | [**ApiOccurrence**](ApiOccurrence.md)| The occurrence to be inserted. | 
 
 ### Return type
 

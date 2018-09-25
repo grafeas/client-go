@@ -29,7 +29,7 @@ type GrafeasProjectsApiService service
 
 /* GrafeasProjectsApiService Returns the requested &#x60;Occurrence&#x60;.
  * @param ctx context.Context for authentication, logging, tracing, etc.
- @param body The project to be inserted
+ @param body The project to create.
  @return ProtobufEmpty*/
 func (a *GrafeasProjectsApiService) CreateProject(ctx context.Context, body ApiProject) (ProtobufEmpty,  *http.Response, error) {
 	var (
@@ -94,7 +94,7 @@ func (a *GrafeasProjectsApiService) CreateProject(ctx context.Context, body ApiP
 
 /* GrafeasProjectsApiService Creates a new &#x60;Occurrence&#x60;. Use this method to create &#x60;Occurrences&#x60; for a resource.
  * @param ctx context.Context for authentication, logging, tracing, etc.
- @param name The name of the project of the form \&quot;projects/{project_id}\&quot;
+ @param name The name of the project in the form of &#x60;projects/{PROJECT_ID}&#x60;.
  @return ProtobufEmpty*/
 func (a *GrafeasProjectsApiService) DeleteProject(ctx context.Context, name string) (ProtobufEmpty,  *http.Response, error) {
 	var (
@@ -158,7 +158,7 @@ func (a *GrafeasProjectsApiService) DeleteProject(ctx context.Context, name stri
 
 /* GrafeasProjectsApiService Lists active &#x60;Occurrences&#x60; for a given project matching the filters.
  * @param ctx context.Context for authentication, logging, tracing, etc.
- @param name The name of the project of the form \&quot;projects/{project_id}\&quot;
+ @param name The name of the project in the form of &#x60;projects/{PROJECT_ID}&#x60;.
  @return ApiProject*/
 func (a *GrafeasProjectsApiService) GetProject(ctx context.Context, name string) (ApiProject,  *http.Response, error) {
 	var (

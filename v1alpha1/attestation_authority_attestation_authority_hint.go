@@ -9,12 +9,8 @@
 
 package grafeas
 
-// Metadata for any related URL information.
-type NoteRelatedUrl struct {
+type AttestationAuthorityAttestationAuthorityHint struct {
 
-	// Specific URL to associate with the note.
-	Url string `json:"url,omitempty"`
-
-	// Label to describe usage of the URL.
-	Label string `json:"label,omitempty"`
+	// The human readable name of this Attestation Authority, e.g. \"qa\".
+	HumanReadableName string `json:"human_readable_name,omitempty"`
 }
