@@ -24,4 +24,5 @@ _testmain.go
 *.prof
 
 swagger-codegen-cli.jar
-generation/grafeas.swagger.json
+grafeas.swagger.json
+grafeas.swagger.json.*
