@@ -10,7 +10,7 @@ The API is defined once in a JSON file, which is then used to auto-generate libr
 This simplifies maintainance and upgrades.
 
 Along with the auto-generated portions of the library, there may be manual changes to the library files.
-These files are preserved between library generations through the [.swagger-codegen-ignore](../0.1.0/.swagger-codegen-ignore) file.
+These files are preserved between library generations through the [.swagger-codegen-ignore](./0.1.0/.swagger-codegen-ignore) file.
 Therefore, it is expected that new versions of the library are generated on top of previous ones, to preserve the manual changes.
 
 ## Regenerating the Library
