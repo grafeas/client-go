@@ -12,7 +12,6 @@ import (
 	"os"
 	"os/exec"
 	"path"
-	"regexp"
 	"strings"
 )
 
@@ -32,8 +31,7 @@ var APIVersion = "v1beta1"
 var SwaggerCodegenVersion = "2.4.5"
 
 // MergedClient : whether to keep the generated Swagger clients separate or to merge the paths
-// TODO: implement function that merges the paths of each Swagger spec into one file before running codegen
-var MergedClient = false
+var MergedClient = true
 
 // trimVersionTag : remove the "v" prefix from the version tag string
 func trimVersionTag(tag string) string {
@@ -60,14 +58,6 @@ func getMostRecentTag() string {
 	return tags[0]["name"].(string)
 }
 
-func swaggerCompatibility(jsonInput string) string {
-	re := regexp.MustCompile(`\/{.*(=.*)}`)
-	jsonOutput := re.ReplaceAllStringFunc(jsonInput, func(substringMatch string) string {
-		return strings.Split(substringMatch, "=")[0] + "}"
-	})
-	return jsonOutput
-}
-
 func get(url string) ([]byte, error) {
 	var responseData []byte
 	resp, err := http.Get(url)
@@ -92,14 +82,12 @@ func downloadCompatibleSwaggerSpec(url string, filename string) error {
 		return err
 	}
 
-	swaggerString := swaggerCompatibility(string(responseBytes))
-
 	f, err := os.Create(filename)
 	if err != nil {
 		return err
 	}
 	defer f.Close()
-	responseReader := bytes.NewReader([]byte(swaggerString))
+	responseReader := bytes.NewReader(responseBytes)
 
 	_, err = io.Copy(f, responseReader)
 	return err
