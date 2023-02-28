@@ -16,7 +16,7 @@ import (
 )
 
 // ServerVersion : the version from the upstream repository
-var ServerVersion = getDefaultVersion()
+//var ServerVersion = getDefaultVersion()
 
 // GrafeasRepository : the repository of the Grafeas server to use for downloading Swagger files
 var GrafeasRepository = "https://github.com/grafeas/grafeas"
@@ -30,8 +30,8 @@ var APIVersion = "v1beta1"
 // SwaggerCodegenVersion : the version of the Swagger CodeGen CLI to download
 var SwaggerCodegenVersion = "2.4.5"
 
-// MergedClient : whether to keep the generated Swagger clients separate or to merge the paths
-var MergedClient = true
+//// MergedClient : whether to keep the generated Swagger clients separate or to merge the paths
+//var MergedClient = true
 
 // trimVersionTag : remove the "v" prefix from the version tag string
 func trimVersionTag(tag string) string {
@@ -132,7 +132,7 @@ func (c *swaggerCodegenConfig) generate() {
 	c.language = stringOrDefault(c.language, "go")
 	c.jar = stringOrDefault(c.jar, "./swagger-codegen-cli.jar")
 	c.configFile = stringOrDefault(c.configFile, "./config.go.json")
-	c.outputDirectory = stringOrDefault(c.outputDirectory, ServerVersion)
+	//c.outputDirectory = stringOrDefault(c.outputDirectory, ServerVersion)
 	args := []string{"-jar", c.jar, "generate", "-i", c.inputSpec, "-l", c.language, "-o", c.outputDirectory, "-c", c.configFile}
 	log.Println("[CMD] java " + strings.Join(args, " "))
 	cmd := exec.Command("java", args...)
@@ -158,20 +158,16 @@ func getSwaggerNames() []string {
 	return []string{"grafeas.swagger.json", "project.swagger.json"}
 }
 
-func swaggerGenerate(mergedClient bool) {
+func swaggerGenerate() {
 	swaggerSpecNames := getSwaggerNames()
 	for _, swaggerSpecName := range swaggerSpecNames {
 		swaggerSpecURL := strings.Join([]string{GrafeasRepository, "/raw/", Reference, "/proto/", APIVersion, "/swagger/", swaggerSpecName}, "")
 		log.Printf("[DOWNLOAD] %s\n", swaggerSpecURL)
 		downloadCompatibleSwaggerSpec(swaggerSpecURL, "")
 		fileBasename := strings.Split(swaggerSpecName, ".")[0]
-		outputDirectory := strings.Join([]string{ServerVersion, fileBasename}, "/")
-		if fileBasename == "grafeas" && !mergedClient {
-			outputDirectory = ServerVersion
-		}
 		swaggerCodeGen := swaggerCodegenConfig{
 			inputSpec:       swaggerSpecName,
-			outputDirectory: outputDirectory,
+			outputDirectory: fileBasename,
 		}
 		swaggerCodeGen.generate()
 	}
@@ -183,11 +179,10 @@ func main() {
 
 Grafeas Repository: 	 %s
 Reference:		 %s
-Server Version:     	 %s
 API Version:    	 %s
 Swagger Codegen Version: %s
 
-`, GrafeasRepository, Reference, ServerVersion, APIVersion, SwaggerCodegenVersion)
+`, GrafeasRepository, Reference, APIVersion, SwaggerCodegenVersion)
 	downloadSwaggerCodegenCli(SwaggerCodegenVersion)
-	swaggerGenerate(MergedClient)
+	swaggerGenerate()
 }

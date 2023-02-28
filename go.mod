@@ -1,6 +1,6 @@
-module github.com/grafeas/client-go
+module github.com/grafeas/client-go/v1
 
-go 1.17
+go 1.19
 
 require (
 	github.com/antihax/optional v1.0.0
