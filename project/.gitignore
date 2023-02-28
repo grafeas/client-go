@@ -22,7 +22,3 @@ _testmain.go
 *.exe
 *.test
 *.prof
-
-swagger-codegen-cli.jar
-*.swagger.json
-*.swagger.json.*
