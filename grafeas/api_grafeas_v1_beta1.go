@@ -1,3 +1,4 @@
+
 /*
  * grafeas.proto
  *
@@ -26,7 +27,7 @@ var (
 
 type GrafeasV1Beta1ApiService service
 
-/* 
+/*
 GrafeasV1Beta1ApiService Creates new notes in batch.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param parent The name of the project in the form of &#x60;projects/[PROJECT_ID]&#x60;, under which the notes are to be created.
@@ -89,9 +90,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1BatchCreateNotes(ctx context.Co
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -128,7 +127,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1BatchCreateNotes(ctx context.Co
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Creates new occurrences in batch.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param parent The name of the project in the form of &#x60;projects/[PROJECT_ID]&#x60;, under which the occurrences are to be created.
@@ -191,9 +190,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1BatchCreateOccurrences(ctx cont
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -230,7 +227,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1BatchCreateOccurrences(ctx cont
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Creates a new note.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param parent The name of the project in the form of &#x60;projects/[PROJECT_ID]&#x60;, under which the note is to be created.
@@ -295,9 +292,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1CreateNote(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -334,7 +329,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1CreateNote(ctx context.Context,
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Creates a new occurrence.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param parent The name of the project in the form of &#x60;projects/[PROJECT_ID]&#x60;, under which the occurrence is to be created.
@@ -397,9 +392,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1CreateOccurrence(ctx context.Co
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -436,7 +429,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1CreateOccurrence(ctx context.Co
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Deletes the specified note.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name1 The name of the note in the form of &#x60;projects/[PROVIDER_ID]/notes/[NOTE_ID]&#x60;.
@@ -496,9 +489,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1DeleteNote(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -535,7 +526,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1DeleteNote(ctx context.Context,
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Deletes the specified occurrence. For example, use this method to delete an occurrence when the occurrence is no longer applicable for the given resource.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name The name of the occurrence in the form of &#x60;projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]&#x60;.
@@ -595,9 +586,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1DeleteOccurrence(ctx context.Co
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -634,7 +623,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1DeleteOccurrence(ctx context.Co
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Gets the specified note.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name1 The name of the note in the form of &#x60;projects/[PROVIDER_ID]/notes/[NOTE_ID]&#x60;.
@@ -694,9 +683,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1GetNote(ctx context.Context, na
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -733,7 +720,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1GetNote(ctx context.Context, na
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Gets the specified occurrence.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name The name of the occurrence in the form of &#x60;projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]&#x60;.
@@ -793,9 +780,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1GetOccurrence(ctx context.Conte
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -832,7 +817,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1GetOccurrence(ctx context.Conte
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Gets the note attached to the specified occurrence. Consumer projects can use this method to get a note that belongs to a provider project.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name The name of the occurrence in the form of &#x60;projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]&#x60;.
@@ -892,9 +877,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1GetOccurrenceNote(ctx context.C
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -931,21 +914,21 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1GetOccurrenceNote(ctx context.C
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Gets a summary of the number and severity of occurrences.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param parent The name of the project to get a vulnerability summary for in the form of &#x60;projects/[PROJECT_ID]&#x60;.
- * @param optional nil or *GrafeasV1Beta1GetVulnerabilityOccurrencesSummaryOpts - Optional Parameters:
+ * @param optional nil or *GrafeasV1Beta1ApiGrafeasV1Beta1GetVulnerabilityOccurrencesSummaryOpts - Optional Parameters:
      * @param "Filter" (optional.String) -  The filter expression.
 
 @return V1beta1VulnerabilityOccurrencesSummary
 */
 
-type GrafeasV1Beta1GetVulnerabilityOccurrencesSummaryOpts struct { 
+type GrafeasV1Beta1ApiGrafeasV1Beta1GetVulnerabilityOccurrencesSummaryOpts struct { 
 	Filter optional.String
 }
 
-func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1GetVulnerabilityOccurrencesSummary(ctx context.Context, parent string, localVarOptionals *GrafeasV1Beta1GetVulnerabilityOccurrencesSummaryOpts) (V1beta1VulnerabilityOccurrencesSummary, *http.Response, error) {
+func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1GetVulnerabilityOccurrencesSummary(ctx context.Context, parent string, localVarOptionals *GrafeasV1Beta1ApiGrafeasV1Beta1GetVulnerabilityOccurrencesSummaryOpts) (V1beta1VulnerabilityOccurrencesSummary, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1001,9 +984,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1GetVulnerabilityOccurrencesSumm
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1040,11 +1021,11 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1GetVulnerabilityOccurrencesSumm
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Lists occurrences referencing the specified note. Provider projects can use this method to get all occurrences across consumer projects referencing the specified note.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name The name of the note to list occurrences for in the form of &#x60;projects/[PROVIDER_ID]/notes/[NOTE_ID]&#x60;.
- * @param optional nil or *GrafeasV1Beta1ListNoteOccurrencesOpts - Optional Parameters:
+ * @param optional nil or *GrafeasV1Beta1ApiGrafeasV1Beta1ListNoteOccurrencesOpts - Optional Parameters:
      * @param "Filter" (optional.String) -  The filter expression.
      * @param "PageSize" (optional.Int32) -  Number of occurrences to return in the list.
      * @param "PageToken" (optional.String) -  Token to provide to skip to a particular spot in the list.
@@ -1052,13 +1033,13 @@ GrafeasV1Beta1ApiService Lists occurrences referencing the specified note. Provi
 @return V1beta1ListNoteOccurrencesResponse
 */
 
-type GrafeasV1Beta1ListNoteOccurrencesOpts struct { 
+type GrafeasV1Beta1ApiGrafeasV1Beta1ListNoteOccurrencesOpts struct { 
 	Filter optional.String
 	PageSize optional.Int32
 	PageToken optional.String
 }
 
-func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListNoteOccurrences(ctx context.Context, name string, localVarOptionals *GrafeasV1Beta1ListNoteOccurrencesOpts) (V1beta1ListNoteOccurrencesResponse, *http.Response, error) {
+func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListNoteOccurrences(ctx context.Context, name string, localVarOptionals *GrafeasV1Beta1ApiGrafeasV1Beta1ListNoteOccurrencesOpts) (V1beta1ListNoteOccurrencesResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1120,9 +1101,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListNoteOccurrences(ctx context
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1159,11 +1138,11 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListNoteOccurrences(ctx context
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Lists notes for the specified project.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param parent The name of the project to list notes for in the form of &#x60;projects/[PROJECT_ID]&#x60;.
- * @param optional nil or *GrafeasV1Beta1ListNotesOpts - Optional Parameters:
+ * @param optional nil or *GrafeasV1Beta1ApiGrafeasV1Beta1ListNotesOpts - Optional Parameters:
      * @param "Filter" (optional.String) -  The filter expression.
      * @param "PageSize" (optional.Int32) -  Number of notes to return in the list. Must be positive. Max allowed page size is 1000. If not specified, page size defaults to 20.
      * @param "PageToken" (optional.String) -  Token to provide to skip to a particular spot in the list.
@@ -1171,13 +1150,13 @@ GrafeasV1Beta1ApiService Lists notes for the specified project.
 @return V1beta1ListNotesResponse
 */
 
-type GrafeasV1Beta1ListNotesOpts struct { 
+type GrafeasV1Beta1ApiGrafeasV1Beta1ListNotesOpts struct { 
 	Filter optional.String
 	PageSize optional.Int32
 	PageToken optional.String
 }
 
-func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListNotes(ctx context.Context, parent string, localVarOptionals *GrafeasV1Beta1ListNotesOpts) (V1beta1ListNotesResponse, *http.Response, error) {
+func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListNotes(ctx context.Context, parent string, localVarOptionals *GrafeasV1Beta1ApiGrafeasV1Beta1ListNotesOpts) (V1beta1ListNotesResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1239,9 +1218,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListNotes(ctx context.Context, 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1278,11 +1255,11 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListNotes(ctx context.Context, 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Lists occurrences for the specified project.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param parent The name of the project to list occurrences for in the form of &#x60;projects/[PROJECT_ID]&#x60;.
- * @param optional nil or *GrafeasV1Beta1ListOccurrencesOpts - Optional Parameters:
+ * @param optional nil or *GrafeasV1Beta1ApiGrafeasV1Beta1ListOccurrencesOpts - Optional Parameters:
      * @param "Filter" (optional.String) -  The filter expression.
      * @param "PageSize" (optional.Int32) -  Number of occurrences to return in the list. Must be positive. Max allowed page size is 1000. If not specified, page size defaults to 20.
      * @param "PageToken" (optional.String) -  Token to provide to skip to a particular spot in the list.
@@ -1290,13 +1267,13 @@ GrafeasV1Beta1ApiService Lists occurrences for the specified project.
 @return V1beta1ListOccurrencesResponse
 */
 
-type GrafeasV1Beta1ListOccurrencesOpts struct { 
+type GrafeasV1Beta1ApiGrafeasV1Beta1ListOccurrencesOpts struct { 
 	Filter optional.String
 	PageSize optional.Int32
 	PageToken optional.String
 }
 
-func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListOccurrences(ctx context.Context, parent string, localVarOptionals *GrafeasV1Beta1ListOccurrencesOpts) (V1beta1ListOccurrencesResponse, *http.Response, error) {
+func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListOccurrences(ctx context.Context, parent string, localVarOptionals *GrafeasV1Beta1ApiGrafeasV1Beta1ListOccurrencesOpts) (V1beta1ListOccurrencesResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1358,9 +1335,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListOccurrences(ctx context.Con
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1397,22 +1372,22 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1ListOccurrences(ctx context.Con
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Updates the specified note.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name1 The name of the note in the form of &#x60;projects/[PROVIDER_ID]/notes/[NOTE_ID]&#x60;.
  * @param body The updated note.
- * @param optional nil or *GrafeasV1Beta1UpdateNoteOpts - Optional Parameters:
+ * @param optional nil or *GrafeasV1Beta1ApiGrafeasV1Beta1UpdateNoteOpts - Optional Parameters:
      * @param "UpdateMask" (optional.String) -  The fields to update.
 
 @return V1beta1Note
 */
 
-type GrafeasV1Beta1UpdateNoteOpts struct { 
+type GrafeasV1Beta1ApiGrafeasV1Beta1UpdateNoteOpts struct { 
 	UpdateMask optional.String
 }
 
-func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1UpdateNote(ctx context.Context, name1 string, body V1beta1Note, localVarOptionals *GrafeasV1Beta1UpdateNoteOpts) (V1beta1Note, *http.Response, error) {
+func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1UpdateNote(ctx context.Context, name1 string, body V1beta1Note, localVarOptionals *GrafeasV1Beta1ApiGrafeasV1Beta1UpdateNoteOpts) (V1beta1Note, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
 		localVarPostBody   interface{}
@@ -1470,9 +1445,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1UpdateNote(ctx context.Context,
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1509,22 +1482,22 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1UpdateNote(ctx context.Context,
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 GrafeasV1Beta1ApiService Updates the specified occurrence.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name The name of the occurrence in the form of &#x60;projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]&#x60;.
  * @param body The updated occurrence.
- * @param optional nil or *GrafeasV1Beta1UpdateOccurrenceOpts - Optional Parameters:
+ * @param optional nil or *GrafeasV1Beta1ApiGrafeasV1Beta1UpdateOccurrenceOpts - Optional Parameters:
      * @param "UpdateMask" (optional.String) -  The fields to update.
 
 @return V1beta1Occurrence
 */
 
-type GrafeasV1Beta1UpdateOccurrenceOpts struct { 
+type GrafeasV1Beta1ApiGrafeasV1Beta1UpdateOccurrenceOpts struct { 
 	UpdateMask optional.String
 }
 
-func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1UpdateOccurrence(ctx context.Context, name string, body V1beta1Occurrence, localVarOptionals *GrafeasV1Beta1UpdateOccurrenceOpts) (V1beta1Occurrence, *http.Response, error) {
+func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1UpdateOccurrence(ctx context.Context, name string, body V1beta1Occurrence, localVarOptionals *GrafeasV1Beta1ApiGrafeasV1Beta1UpdateOccurrenceOpts) (V1beta1Occurrence, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
 		localVarPostBody   interface{}
@@ -1582,9 +1555,7 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1UpdateOccurrence(ctx context.Co
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -1620,3 +1591,4 @@ func (a *GrafeasV1Beta1ApiService) GrafeasV1Beta1UpdateOccurrence(ctx context.Co
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

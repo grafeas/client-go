@@ -97,10 +97,10 @@ Lists projects.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ProjectsListProjectsOpts** | optional parameters | nil if no parameters
+ **optional** | ***ProjectsApiProjectsListProjectsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ProjectsListProjectsOpts struct
+Optional parameters are passed through a pointer to a ProjectsApiProjectsListProjectsOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

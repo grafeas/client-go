@@ -1,3 +1,4 @@
+
 /*
  * project.proto
  *
@@ -26,7 +27,7 @@ var (
 
 type ProjectsApiService service
 
-/* 
+/*
 ProjectsApiService Creates a new project.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body The project to create.
@@ -87,9 +88,7 @@ func (a *ProjectsApiService) ProjectsCreateProject(ctx context.Context, body Pro
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -126,7 +125,7 @@ func (a *ProjectsApiService) ProjectsCreateProject(ctx context.Context, body Pro
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ProjectsApiService Deletes the specified project.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name The name of the project in the form of &#x60;projects/{PROJECT_ID}&#x60;.
@@ -186,9 +185,7 @@ func (a *ProjectsApiService) ProjectsDeleteProject(ctx context.Context, name str
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -225,7 +222,7 @@ func (a *ProjectsApiService) ProjectsDeleteProject(ctx context.Context, name str
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ProjectsApiService Gets the specified project.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name The name of the project in the form of &#x60;projects/{PROJECT_ID}&#x60;.
@@ -285,9 +282,7 @@ func (a *ProjectsApiService) ProjectsGetProject(ctx context.Context, name string
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -324,10 +319,10 @@ func (a *ProjectsApiService) ProjectsGetProject(ctx context.Context, name string
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 ProjectsApiService Lists projects.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ProjectsListProjectsOpts - Optional Parameters:
+ * @param optional nil or *ProjectsApiProjectsListProjectsOpts - Optional Parameters:
      * @param "Filter" (optional.String) -  The filter expression.
      * @param "PageSize" (optional.Int32) -  Number of projects to return in the list.
      * @param "PageToken" (optional.String) -  Token to provide to skip to a particular spot in the list.
@@ -335,13 +330,13 @@ ProjectsApiService Lists projects.
 @return ProjectListProjectsResponse
 */
 
-type ProjectsListProjectsOpts struct { 
+type ProjectsApiProjectsListProjectsOpts struct { 
 	Filter optional.String
 	PageSize optional.Int32
 	PageToken optional.String
 }
 
-func (a *ProjectsApiService) ProjectsListProjects(ctx context.Context, localVarOptionals *ProjectsListProjectsOpts) (ProjectListProjectsResponse, *http.Response, error) {
+func (a *ProjectsApiService) ProjectsListProjects(ctx context.Context, localVarOptionals *ProjectsApiProjectsListProjectsOpts) (ProjectListProjectsResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -402,9 +397,7 @@ func (a *ProjectsApiService) ProjectsListProjects(ctx context.Context, localVarO
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -440,3 +433,4 @@ func (a *ProjectsApiService) ProjectsListProjects(ctx context.Context, localVarO
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
+

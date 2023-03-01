@@ -270,10 +270,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **parent** | **string**| The name of the project to get a vulnerability summary for in the form of &#x60;projects/[PROJECT_ID]&#x60;. | 
- **optional** | ***GrafeasV1Beta1GetVulnerabilityOccurrencesSummaryOpts** | optional parameters | nil if no parameters
+ **optional** | ***GrafeasV1Beta1ApiGrafeasV1Beta1GetVulnerabilityOccurrencesSummaryOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a GrafeasV1Beta1GetVulnerabilityOccurrencesSummaryOpts struct
+Optional parameters are passed through a pointer to a GrafeasV1Beta1ApiGrafeasV1Beta1GetVulnerabilityOccurrencesSummaryOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -305,10 +305,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **name** | **string**| The name of the note to list occurrences for in the form of &#x60;projects/[PROVIDER_ID]/notes/[NOTE_ID]&#x60;. | 
- **optional** | ***GrafeasV1Beta1ListNoteOccurrencesOpts** | optional parameters | nil if no parameters
+ **optional** | ***GrafeasV1Beta1ApiGrafeasV1Beta1ListNoteOccurrencesOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a GrafeasV1Beta1ListNoteOccurrencesOpts struct
+Optional parameters are passed through a pointer to a GrafeasV1Beta1ApiGrafeasV1Beta1ListNoteOccurrencesOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -342,10 +342,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **parent** | **string**| The name of the project to list notes for in the form of &#x60;projects/[PROJECT_ID]&#x60;. | 
- **optional** | ***GrafeasV1Beta1ListNotesOpts** | optional parameters | nil if no parameters
+ **optional** | ***GrafeasV1Beta1ApiGrafeasV1Beta1ListNotesOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a GrafeasV1Beta1ListNotesOpts struct
+Optional parameters are passed through a pointer to a GrafeasV1Beta1ApiGrafeasV1Beta1ListNotesOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -379,10 +379,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **parent** | **string**| The name of the project to list occurrences for in the form of &#x60;projects/[PROJECT_ID]&#x60;. | 
- **optional** | ***GrafeasV1Beta1ListOccurrencesOpts** | optional parameters | nil if no parameters
+ **optional** | ***GrafeasV1Beta1ApiGrafeasV1Beta1ListOccurrencesOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a GrafeasV1Beta1ListOccurrencesOpts struct
+Optional parameters are passed through a pointer to a GrafeasV1Beta1ApiGrafeasV1Beta1ListOccurrencesOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -417,10 +417,10 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **name1** | **string**| The name of the note in the form of &#x60;projects/[PROVIDER_ID]/notes/[NOTE_ID]&#x60;. | 
   **body** | [**V1beta1Note**](V1beta1Note.md)| The updated note. | 
- **optional** | ***GrafeasV1Beta1UpdateNoteOpts** | optional parameters | nil if no parameters
+ **optional** | ***GrafeasV1Beta1ApiGrafeasV1Beta1UpdateNoteOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a GrafeasV1Beta1UpdateNoteOpts struct
+Optional parameters are passed through a pointer to a GrafeasV1Beta1ApiGrafeasV1Beta1UpdateNoteOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -454,10 +454,10 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **name** | **string**| The name of the occurrence in the form of &#x60;projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]&#x60;. | 
   **body** | [**V1beta1Occurrence**](V1beta1Occurrence.md)| The updated occurrence. | 
- **optional** | ***GrafeasV1Beta1UpdateOccurrenceOpts** | optional parameters | nil if no parameters
+ **optional** | ***GrafeasV1Beta1ApiGrafeasV1Beta1UpdateOccurrenceOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a GrafeasV1Beta1UpdateOccurrenceOpts struct
+Optional parameters are passed through a pointer to a GrafeasV1Beta1ApiGrafeasV1Beta1UpdateOccurrenceOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------

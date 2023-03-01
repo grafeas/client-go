@@ -25,7 +25,7 @@ var Reference = "master"
 var APIVersion = "v1beta1"
 
 // SwaggerCodegenVersion : the version of the Swagger CodeGen CLI to download
-var SwaggerCodegenVersion = "2.4.5"
+var SwaggerCodegenVersion = "2.4.18"
 
 // trimVersionTag : remove the "v" prefix from the version tag string
 func trimVersionTag(tag string) string {
