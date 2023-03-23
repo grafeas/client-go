@@ -1,0 +1,163 @@
+---
+swagger: "2.0"
+info:
+  version: "version not set"
+  title: "project.proto"
+tags:
+- name: "Projects"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /v1beta1/projects:
+    get:
+      tags:
+      - "Projects"
+      summary: "Lists projects."
+      operationId: "Projects_ListProjects"
+      parameters:
+      - name: "filter"
+        in: "query"
+        description: "The filter expression."
+        required: false
+        type: "string"
+        x-exportParamName: "Filter"
+        x-optionalDataType: "String"
+      - name: "pageSize"
+        in: "query"
+        description: "Number of projects to return in the list."
+        required: false
+        type: "integer"
+        format: "int32"
+        x-exportParamName: "PageSize"
+        x-optionalDataType: "Int32"
+      - name: "pageToken"
+        in: "query"
+        description: "Token to provide to skip to a particular spot in the list."
+        required: false
+        type: "string"
+        x-exportParamName: "PageToken"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: "A successful response."
+          schema:
+            $ref: "#/definitions/projectListProjectsResponse"
+        default:
+          description: "An unexpected error response."
+          schema:
+            $ref: "#/definitions/rpcStatus"
+    post:
+      tags:
+      - "Projects"
+      summary: "Creates a new project."
+      operationId: "Projects_CreateProject"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "The project to create."
+        required: true
+        schema:
+          $ref: "#/definitions/projectProject"
+        x-exportParamName: "Body"
+      responses:
+        "200":
+          description: "A successful response."
+          schema:
+            $ref: "#/definitions/projectProject"
+        default:
+          description: "An unexpected error response."
+          schema:
+            $ref: "#/definitions/rpcStatus"
+  /v1beta1/{name}:
+    get:
+      tags:
+      - "Projects"
+      summary: "Gets the specified project."
+      operationId: "Projects_GetProject"
+      parameters:
+      - name: "name"
+        in: "path"
+        description: "The name of the project in the form of `projects/{PROJECT_ID}`."
+        required: true
+        type: "string"
+        pattern: "projects/[^/]+"
+        x-exportParamName: "Name"
+      responses:
+        "200":
+          description: "A successful response."
+          schema:
+            $ref: "#/definitions/projectProject"
+        default:
+          description: "An unexpected error response."
+          schema:
+            $ref: "#/definitions/rpcStatus"
+    delete:
+      tags:
+      - "Projects"
+      summary: "Deletes the specified project."
+      operationId: "Projects_DeleteProject"
+      parameters:
+      - name: "name"
+        in: "path"
+        description: "The name of the project in the form of `projects/{PROJECT_ID}`."
+        required: true
+        type: "string"
+        pattern: "projects/[^/]+"
+        x-exportParamName: "Name"
+      responses:
+        "200":
+          description: "A successful response."
+          schema: {}
+        default:
+          description: "An unexpected error response."
+          schema:
+            $ref: "#/definitions/rpcStatus"
+definitions:
+  projectListProjectsResponse:
+    type: "object"
+    properties:
+      projects:
+        type: "array"
+        description: "The projects requested."
+        items:
+          $ref: "#/definitions/projectProject"
+      nextPageToken:
+        type: "string"
+        description: "The next pagination token in the list response. It should be\
+          \ used as\n`page_token` for the following request. An empty value means\
+          \ no more\nresults."
+    description: "Response for listing projects."
+    example:
+      projects:
+      - name: "name"
+      - name: "name"
+      nextPageToken: "nextPageToken"
+  projectProject:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+        description: "The name of the project in the form of `projects/{PROJECT_ID}`."
+    description: "Describes a Grafeas project."
+    example:
+      name: "name"
+  protobufAny:
+    type: "object"
+    properties:
+      '@type':
+        type: "string"
+    additionalProperties: {}
+  rpcStatus:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      message:
+        type: "string"
+      details:
+        type: "array"
+        items:
+          $ref: "#/definitions/protobufAny"

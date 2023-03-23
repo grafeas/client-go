@@ -34,3 +34,7 @@ running:
 ```bash
 java -jar swagger-codegen-cli.jar config.go.json -l go
 ```
+
+### Introducing a breaking change
+
+When introducing a breaking change v2, follow Semantic Import Versioning https://research.swtch.com/vgo-import and append the /v2 to the module path.
