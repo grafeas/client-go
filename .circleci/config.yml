@@ -12,7 +12,7 @@ jobs:
     #### TEMPLATE_NOTE: go expects specific checkout path representing url
     #### expecting it in the form of
     ####   /go/src/github.com/circleci/go-tool
-    working_directory: /go/src/github.com/grafeas/client-go
+    working_directory: /home/circleci/go/src/github.com/grafeas/client-go
     steps:
       - checkout
 
