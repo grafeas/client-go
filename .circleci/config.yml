@@ -6,17 +6,17 @@ jobs:
   build:
     docker:
       # specify the version
-      - image: circleci/golang:1.8
+      - image: cimg/go:1.20
       
 
     #### TEMPLATE_NOTE: go expects specific checkout path representing url
     #### expecting it in the form of
     ####   /go/src/github.com/circleci/go-tool
-    working_directory: /go/src/github.com/grafeas/client-go
+    working_directory: /home/circleci/go/src/github.com/grafeas/client-go
     steps:
       - checkout
 
       # specify any bash command here prefixed with `run: `
-      - run: go get -v -t -d ./...
+      - run: go get ./...
       - run: go build -v ./...
       - run: go test -v ./...
